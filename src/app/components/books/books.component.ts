@@ -16,5 +16,8 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
     this.BooksService.getBooks().subscribe((books) => (this.books = books))
   }
+  toggleDetailsPage(){
+    alert("Yaha challa")
+  }
 
 }
