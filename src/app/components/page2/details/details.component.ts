@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from 'src/app/services/books.service';
+import { Book } from 'src/app/Book';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
+  currentBook :Book = history.state.data
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+    alert(this.currentBook.name)
   }
 
 }
