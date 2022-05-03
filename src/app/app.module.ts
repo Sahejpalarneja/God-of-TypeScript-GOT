@@ -6,6 +6,7 @@ import { BookItemComponent } from './components/book-item/book-item.component';
 import { BooksComponent } from './components/books/books.component';
 import { CharctersComponent } from './components/characters/charcters.component';
 import { HousesComponent } from './components/houses/houses.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HousesComponent } from './components/houses/houses.component';
     BookItemComponent,
     BooksComponent,
     CharctersComponent,
-    HousesComponent
+    HousesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
