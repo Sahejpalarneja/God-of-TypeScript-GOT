@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from  '../../Book';
 import { BooksService } from 'src/app/services/books.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,14 +11,14 @@ import { BooksService } from 'src/app/services/books.service';
 })
 export class BooksComponent implements OnInit {
   books:Book[]  = []
+ 
+  
 
-  constructor(private BooksService :BooksService) {} 
+  constructor(private BooksService :BooksService,private router:Router) {} 
 
   ngOnInit(): void {
     this.BooksService.getBooks().subscribe((books) => (this.books = books))
   }
-  toggleDetailsPage(){
-    alert("Yaha challa")
-  }
+ 
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from 'src/app/Book';
 
 @Component({
@@ -12,12 +13,12 @@ export class BookItemComponent implements OnInit {
   book!: Book; 
   @Output() btnClickDetails = new EventEmitter()
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-  onClickDetails(){
-    this.btnClickDetails.emit()
+  onClickDetails(currentBook:Book){
+    this.router.navigate(["/details"],{state:{data:currentBook}});
   }
 
 }
