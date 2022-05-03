@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Book } from 'src/app/Book';
 
 @Component({
   selector: 'app-book-item',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookItemComponent implements OnInit {
 
+  @Input()
+  book!: Book; 
+  @Output() btnClickDetails = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onClickDetails(){
+    this.btnClickDetails.emit()
   }
 
 }
