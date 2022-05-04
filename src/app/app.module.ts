@@ -14,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollComponent } from './components/scroll/scroll.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CharacteritemComponent } from './components/page2/characteritem/characteritem.component';
+import { CharacterDetailsComponent } from './components/page3/character-details/character-details.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
-  {path:'details',component:DetailsComponent}
+  {path:'details',component:DetailsComponent},
+  {path:'character',component:CharacterDetailsComponent}
 ]
   
 @NgModule({
@@ -31,7 +33,8 @@ const appRoutes:Routes = [
     DetailsComponent,
     DisplayBookComponent,
     ScrollComponent,
-    CharacteritemComponent
+    CharacteritemComponent,
+    CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,
