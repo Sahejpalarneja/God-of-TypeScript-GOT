@@ -13,4 +13,7 @@ export class CharactersService {
   getCharacters():Observable<Character[]>{
     return this.http.get<Character[]>(this.apiUrl)
   }
+  getCharacter(charUrl:string):Observable<Character>{
+    return this.http.get<Character>(charUrl) 
+  }
 }
