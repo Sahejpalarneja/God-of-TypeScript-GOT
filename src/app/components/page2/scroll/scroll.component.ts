@@ -13,9 +13,9 @@ import { Book } from 'src/app/Book';
 export class ScrollComponent implements OnInit {
   @Input() currentBook! : Book;
   characters :string[]= [];
-  private router:Router
+ 
 
-  constructor(){ 
+  constructor( private router:Router){ 
     
   }
 
@@ -26,5 +26,6 @@ export class ScrollComponent implements OnInit {
   onCharacterClick(character:string)
   {
     this.router.navigate(["/character"],{state:{data:character}});
+ 
   }
 }

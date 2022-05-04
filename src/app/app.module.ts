@@ -11,10 +11,11 @@ import { Routes,RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/page2/details/details.component';
 import { DisplayBookComponent } from './components/page2/display-book/display-book.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ScrollComponent } from './components/scroll/scroll.component';
+import { ScrollComponent } from './components/page2/scroll/scroll.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CharacteritemComponent } from './components/page2/characteritem/characteritem.component';
 import { CharacterDetailsComponent } from './components/page3/character-details/character-details.component';
+import { DisplayCharacterComponent } from './components/page3/display-character/display-character.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -34,7 +35,8 @@ const appRoutes:Routes = [
     DisplayBookComponent,
     ScrollComponent,
     CharacteritemComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    DisplayCharacterComponent
   ],
   imports: [
     BrowserModule,
