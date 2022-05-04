@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/page1/header/header.component';
 import { Routes,RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/page2/details/details.component';
 import { DisplayBookComponent } from './components/page2/display-book/display-book.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -30,7 +31,8 @@ const appRoutes:Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
