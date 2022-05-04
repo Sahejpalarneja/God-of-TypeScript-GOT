@@ -9,6 +9,7 @@ import { HousesComponent } from './components/houses/houses.component';
 import { HeaderComponent } from './components/page1/header/header.component';
 import { Routes,RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/page2/details/details.component';
+import { DisplayBookComponent } from './components/page2/display-book/display-book.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -23,7 +24,8 @@ const appRoutes:Routes = [
     CharctersComponent,
     HousesComponent,
     HeaderComponent,
-    DetailsComponent
+    DetailsComponent,
+    DisplayBookComponent
   ],
   imports: [
     BrowserModule,
