@@ -10,6 +10,10 @@ import { HeaderComponent } from './components/page1/header/header.component';
 import { Routes,RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/page2/details/details.component';
 import { DisplayBookComponent } from './components/page2/display-book/display-book.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollComponent } from './components/scroll/scroll.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { CharacteritemComponent } from './components/page2/characteritem/characteritem.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -25,12 +29,16 @@ const appRoutes:Routes = [
     HousesComponent,
     HeaderComponent,
     DetailsComponent,
-    DisplayBookComponent
+    DisplayBookComponent,
+    ScrollComponent,
+    CharacteritemComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
