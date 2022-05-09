@@ -1,7 +1,7 @@
-<div class="charcter-item"*ngFor="let house of houses">
+<div class="house-item"*ngFor="let house of houses">
     <a (click) = "onHouseClick(house)">
-        <span class="badge">{{ house.id }}</span
-        >{{ house.name }}
+        <span class="badge">{{ house.id }}</span>
+        <p>{{ house.name }}</p>
       </a>
       
     

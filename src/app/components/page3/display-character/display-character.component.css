@@ -1,0 +1,21 @@
+p.Name{
+    text-align: center;
+    font-size: 28px ;
+}
+p{
+    color: black; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 32px; margin: 0 0 24px; 
+}
+.clickable-data{
+    background-color: aquamarine;
+  
+
+}
+a{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    
+}
+.name{
+    text-align: center;
+    font-size: 25px;
+}

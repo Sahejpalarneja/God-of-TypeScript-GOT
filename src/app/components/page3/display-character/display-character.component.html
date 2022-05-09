@@ -1,30 +1,34 @@
+<div class="data">
+    <p class="name">Name :{{character.name}}</p>
+    <p>Gender : {{character.gender}}</p>
+    <p>Culture :{{character.culture}}</p>
+    <p>Born in : {{character.born}}</p>
+    <p>Died in :{{character.died}}</p>
+    <p>Titles :{{character.titles}}</p>
+    <p>Aliases : {{character.aliases}}</p>  
+    <p>Appeared in : {{character.tvSeries}} TV Series</p>
+    <p>Point-of-view in :{{character.povBooks}}</p>
+    <p>Played by: {{character.playedBy}}</p>
+</div>
+<div class="clickable-data">
+    <div class="character-values">
+        <a (click) = "onCharacterClick(character.father)"><p>Father : {{character.father}}</p></a>
+        <a (click) = "onCharacterClick(character.mother)"><p>Mother : {{character.mother}}</p></a>
+        <a (click) = "onCharacterClick(character.spouse)"><p>Spouse : {{character.spouse}}</p></a>
+    </div>
+    <p>Allegiances:</p>
+    <div class="house-values" *ngFor="let allegiance of character.allegiances">
+        <a (click)="onHouseClick(allegiance)">
+            <p> {{allegiance}} </p>
+        </a>
+    </div>
+    <p>Appeared in: </p>
+    <div class="books" *ngFor="let book of character.books">
+        <a (click)="onBookClick(book)">
+            <p> {{book}}</p>
+        </a>
+</div>
+</div>
 
-<p>Name :{{character.name}}</p>
-<p>Gender : {{character.gender}}</p>
-<p>Culture :{{character.culture}}</p>
-<p>Born in : {{character.born}}</p>
-<p>Died in :{{character.died}}</p>
-<p>Titles :{{character.titles}}</p>
-<p>Aliases : {{character.aliases}}</p>  
-<div class="character-values">
-    <a (click) = "onCharacterClick(character.father)"><p>Father : {{character.father}}</p></a>
-    <a (click) = "onCharacterClick(character.mother)"><p>Mother : {{character.mother}}</p></a>
-    <a (click) = "onCharacterClick(character.spouse)"><p>Spouse : {{character.spouse}}</p></a>
-</div>
-<p>Allegiances:</p>
-<div class="house-values" *ngFor="let allegiance of character.allegiances">
-    <a (click)="onHouseClick(allegiance)">
-        <p> {{allegiance}} </p>
-    </a>
-</div>
-<span>Appeared in: </span>
-<div class="books" *ngFor="let book of character.books">
-    <a (click)="onBookClick(book)">
-        <p> {{book}}</p>
-    </a>
-</div>
 
-<p>Appeared in : {{character.tvSeries}} TV Series</p>
-<p>Point-of-view in :{{character.povBooks}}</p>
-<p>Played by: {{character.playedBy}}</p>
   
