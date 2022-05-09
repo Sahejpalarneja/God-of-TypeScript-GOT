@@ -50,7 +50,7 @@ const appRoutes:Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    ScrollingModule
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

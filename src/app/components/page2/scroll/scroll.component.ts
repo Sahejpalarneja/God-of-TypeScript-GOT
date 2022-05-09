@@ -25,7 +25,7 @@ export class ScrollComponent implements OnInit {
   }
   onCharacterClick(character:string)
   {
-    this.router.navigate(["/character"],{state:{data:character}});
+    this.router.navigate(["/id"],{state:{data:character}});
  
   }
 }
