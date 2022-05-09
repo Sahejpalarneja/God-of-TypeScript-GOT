@@ -31,22 +31,22 @@ const appRoutes:Routes = [
   
 @NgModule({
   declarations:
-    [
-      AppComponent,
-      BookItemComponent,
-      BooksComponent,
-      CharctersComponent,
-      HousesComponent,
-      HeaderComponent,
-      DetailsComponent,
-      DisplayBookComponent,
-      ScrollComponent,
-      CharacteritemComponent,
-      CharacterDetailsComponent,
-      DisplayCharacterComponent,
-      DisplayAllCharactersComponent,
-      DisplayAllHousesComponent
-    ],
+  [  
+    AppComponent,
+    BookItemComponent,
+    BooksComponent,
+    CharctersComponent,
+    HousesComponent,
+    HeaderComponent,
+    DetailsComponent,
+    DisplayBookComponent,
+    ScrollComponent,
+    CharacteritemComponent,
+    CharacterDetailsComponent,
+    DisplayCharacterComponent,
+    DisplayAllCharactersComponent,
+    DisplayAllHousesComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

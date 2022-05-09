@@ -8,7 +8,7 @@ import { House } from '../Templates/House';
 })
 export class HousesService {
   private apiUrl = 'https://anapioficeandfire.com/api/houses'
-  private pageSize = 50;
+  private pageSize = 20;
 
   constructor(private http:HttpClient) { }
 
@@ -16,7 +16,7 @@ export class HousesService {
     const url = `${this.apiUrl}?page=${pageNumber || 1}&pageSize=${
       this.pageSize
     }`;
-    return this.http.get<House[]>(this.apiUrl)
+    return this.http.get<House[]>(url)
   }
 
   getHouse(id:number){
