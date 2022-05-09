@@ -1,10 +1,10 @@
 
 import { Injectable } from '@angular/core';
 import { Character } from '../Character';
-import { Observable, of } from 'rxjs';
+import { Observable, } from 'rxjs';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import {  map,  } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class CharacterService {
   private charactersUrl = 'https://www.anapioficeandfire.com/api/characters';
   private pageSize = 50;
-  private totalPages = 43;
+  
  
   constructor(
     private http: HttpClient,
