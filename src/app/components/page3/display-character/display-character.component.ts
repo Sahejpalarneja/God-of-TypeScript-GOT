@@ -50,7 +50,7 @@ export class DisplayCharacterComponent implements OnInit {
 
   }
   onBookClick(url:string){
-    alert('Book Click')
+    this.router.navigate(['/details'],{state:{data:url}})
   }
   
 }
