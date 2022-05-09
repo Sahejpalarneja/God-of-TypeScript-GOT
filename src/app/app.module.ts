@@ -16,11 +16,16 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CharacteritemComponent } from './components/page2/characteritem/characteritem.component';
 import { CharacterDetailsComponent } from './components/page3/character-details/character-details.component';
 import { DisplayCharacterComponent } from './components/page3/display-character/display-character.component';
+import { DisplayAllCharactersComponent } from './components/characterPage/display-all-characters/display-all-characters.component';
+import { DisplayAllHousesComponent } from './components/characterPage/display-all-houses/display-all-houses.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
   {path:'details',component:DetailsComponent},
-  {path:'character',component:CharacterDetailsComponent}
+  {path:'character',component:DisplayAllCharactersComponent},
+  {path:'books',component:BooksComponent},
+  {path:'houses',component:DisplayAllHousesComponent},
+  {path:'id',component:CharacterDetailsComponent}
 ]
   
 @NgModule({
@@ -36,7 +41,9 @@ const appRoutes:Routes = [
     ScrollComponent,
     CharacteritemComponent,
     CharacterDetailsComponent,
-    DisplayCharacterComponent
+    DisplayCharacterComponent,
+    DisplayAllCharactersComponent,
+    DisplayAllHousesComponent
   ],
   imports: [
     BrowserModule,

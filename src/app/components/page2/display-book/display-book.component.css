@@ -2,3 +2,20 @@ h3{
     text-align: center;
     color: goldenrod;
 }
+.data{
+    border: 2px;
+    border-style: solid;
+    border-color: purple;
+    float: left;
+    width: 500px;
+    align-self: flex-start;
+}
+.scroll{
+    border: 2px;
+    border-style: solid;
+    width: 700px;
+    border-color: green;
+    float: right;
+    align-self: flex-end;
+
+}

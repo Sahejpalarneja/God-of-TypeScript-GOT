@@ -1,0 +1,8 @@
+<cdk-virtual-scroll-viewport itemSize="100">
+ <li *cdkVirtualFor ="let character of characters">
+
+     <button (click)="onCharacterClick(character)">{{character}}</button>
+    
+    </li>
+</cdk-virtual-scroll-viewport>
+ 

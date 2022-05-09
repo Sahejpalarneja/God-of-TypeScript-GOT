@@ -4,3 +4,13 @@ header{
     color: gold;
     height: 120px;
 }
+nav{
+    float:left;
+    background: white;
+    height: 40px;
+    border: 2px;
+    margin: 2px;
+    border-color: black;
+    padding: 2px;
+
+}
