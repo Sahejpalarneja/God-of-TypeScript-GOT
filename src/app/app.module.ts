@@ -18,6 +18,7 @@ import { CharacterDetailsComponent } from './components/page3/character-details/
 import { DisplayCharacterComponent } from './components/page3/display-character/display-character.component';
 import { DisplayAllCharactersComponent } from './components/characterPage/display-all-characters/display-all-characters.component';
 import { DisplayAllHousesComponent } from './components/characterPage/display-all-houses/display-all-houses.component';
+import { PaginatorModule } from 'primeng/paginator';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -52,6 +53,7 @@ const appRoutes:Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     ScrollingModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

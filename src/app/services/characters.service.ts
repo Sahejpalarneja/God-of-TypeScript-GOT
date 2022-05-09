@@ -13,6 +13,7 @@ export class CharacterService {
   private charactersUrl = 'https://www.anapioficeandfire.com/api/characters';
   private pageSize = 50;
   private totalPages = 43;
+ 
   constructor(
     private http: HttpClient,
     
@@ -34,8 +35,11 @@ export class CharacterService {
       })
     );
   }
-  getAllCharacters():Observable<Character[]>{
-    return this.http.get<Character[]>(this.charactersUrl)
+  getAllCharacters(pageNumber:number):Observable<Character[]>{
+    const url = `${this.charactersUrl}?page=${pageNumber || 1}&pageSize=${
+      this.pageSize
+    }`;
+    return this.http.get<Character[]>(url)
   }
 
   getCharacter(id: number): Observable<Character> {

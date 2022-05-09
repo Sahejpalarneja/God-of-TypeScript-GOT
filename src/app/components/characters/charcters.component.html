@@ -1,4 +1,14 @@
 
 <div class="charcter-item"*ngFor="let character of characters">
-    <p >{{character.name}}</p>
+    <a (click) = "onCharacterclick(character)">
+        <span class="badge">{{ character.id }}</span
+        >{{ character.name }}
+      </a>
+      
+    
 </div>
+<p-paginator
+  [rows]="50"
+  [totalRecords]="2000"
+  (onPageChange)="paginate($event)"
+></p-paginator>
