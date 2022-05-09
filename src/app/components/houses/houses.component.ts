@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { House } from 'src/app/House';
+import { House } from 'src/app/Templates/House';
 import { HousesService } from 'src/app/services/houses.service';
 import { Router } from '@angular/router';
 

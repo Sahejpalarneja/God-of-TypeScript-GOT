@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Book } from 'src/app/Book';
+import { Book } from 'src/app/Templates/Book';
 
 @Component({
   selector: 'app-book-item',

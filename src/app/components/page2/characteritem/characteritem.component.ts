@@ -1,9 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { CharacterService } from 'src/app/services/characters.service';
-import { Character } from 'src/app/Character';
+
+import { Character } from 'src/app/Templates/Character';
 
 
-import { map, Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-characteritem',

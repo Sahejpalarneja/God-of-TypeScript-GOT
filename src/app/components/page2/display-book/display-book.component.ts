@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Book } from 'src/app/Book';
-import { BookItemComponent } from '../../page1/book-item/book-item.component';
+import { Book } from 'src/app/Templates/Book';
+
 
 @Component({
   selector: 'app-display-book',

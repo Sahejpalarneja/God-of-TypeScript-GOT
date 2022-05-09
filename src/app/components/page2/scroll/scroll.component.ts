@@ -1,6 +1,6 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { Router } from '@angular/router'
-import { Book } from 'src/app/Book';
+import { Book } from 'src/app/Templates/Book';
 
 
 

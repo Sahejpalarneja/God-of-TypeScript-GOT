@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { Character } from '../Character';
+import { Character } from '../Templates/Character';
 import { Observable, } from 'rxjs';
 
 import { HttpClient } from '@angular/common/http';

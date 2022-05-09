@@ -1,5 +1,5 @@
 import { Component, OnInit , Input} from '@angular/core';
-import { Character } from 'src/app/Character';
+
 
 
 @Component({

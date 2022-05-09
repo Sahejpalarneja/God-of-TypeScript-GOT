@@ -1,4 +1,4 @@
-import { Character } from 'src/app/Character';
+import { Character } from 'src/app/Templates/Character';
 import { Component, OnInit, Input } from '@angular/core';
 import { CharacterService } from 'src/app/services/characters.service';
 import { Router } from '@angular/router';
@@ -38,6 +38,9 @@ export class DisplayCharacterComponent implements OnInit {
   onCharacterClick(url:string){
    this.url = url;
    this.getCharacter();
+  }
+  onHouseClick(url:string){
+
   }
   
 }
