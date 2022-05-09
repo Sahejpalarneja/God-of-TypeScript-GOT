@@ -16,7 +16,7 @@ export class HousesComponent implements OnInit {
 
   private currentPage = 1;
 
-  constructor(private houseService: HousesService) { }
+  constructor(private houseService: HousesService,private router:Router) { }
 
   ngOnInit(): void {
     this.getHouses();
@@ -31,6 +31,7 @@ export class HousesComponent implements OnInit {
     this.getHouses();
   }
   onHouseClick(house:House){
+    this.router.navigate(["/houseId"],{state:{data:house.url}})
 
   }
 

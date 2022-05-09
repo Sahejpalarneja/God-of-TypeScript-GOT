@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
 export class DisplayCharacterComponent implements OnInit {
   @Input() character!:Character
   @Input() url =history.state.data;
-  father! :Character;
-  characterObj! : Character ;
+ 
   constructor(
    
     private characterService: CharacterService,
