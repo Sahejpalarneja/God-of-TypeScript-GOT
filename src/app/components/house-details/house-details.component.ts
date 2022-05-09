@@ -26,5 +26,14 @@ export class HouseDetailsComponent implements OnInit {
     .getHouse(id)
     .subscribe((data) => (this.house = data));
   }
+  onHouseClick(url:string)
+  {
+    this.url = url;
+    this.getHouse();
+  }
+  onCharacterClick(url:string)
+  {
+    this.router.navigate(['/id'],{state:{data:url}})
+  }
 
 }

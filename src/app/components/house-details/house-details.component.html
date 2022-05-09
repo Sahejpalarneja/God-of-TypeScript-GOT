@@ -4,9 +4,14 @@
 <p>Word : {{house.word}} </p>
 <p>Titles: {{house.titles}}</p>
 <p>Seats : {{house.seats}}</p>
-<p>Current Lord: {{house.currentLord}}</p>
-<p>Heir : {{house.heir}}</p>
-<p>Overlord: {{house.overlord}}</p>
+<div class="character-values">
+    <div class="current-lord-value" *ngFor=" let lord of house.currentLord">
+        <a (click) = "onCharacterClick(lord)"><p>Current Lord: {{lord}}</p></a>
+    </div>
+    
+    <a (click)="onCharacterClick(house.heir)"><p>Heir : {{house.heir}}</p></a>
+</div>
+<a (click)="onHouseClick(house.overlord)"><p>Overlord: {{house.overlord}}</p></a>
 <p>Founded : {{house.founded}}</p>
 <p>Died Out: {{house.diedOut}}</p>
 <p>Ancestral weopons: {{house.ancestralWeapons}}</p>

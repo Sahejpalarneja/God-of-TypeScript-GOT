@@ -11,8 +11,19 @@
     <a (click) = "onCharacterClick(character.mother)"><p>Mother : {{character.mother}}</p></a>
     <a (click) = "onCharacterClick(character.spouse)"><p>Spouse : {{character.spouse}}</p></a>
 </div>
-<p>Allegiances: {{character.allegiances}} </p>
-<p>Appered in : {{character.books}} Books </p>
+<p>Allegiances:</p>
+<div class="house-values" *ngFor="let allegiance of character.allegiances">
+    <a (click)="onHouseClick(allegiance)">
+        <p> {{allegiance}} </p>
+    </a>
+</div>
+<span>Appeared in: </span>
+<div class="books" *ngFor="let book of character.books">
+    <a (click)="onBookClick(book)">
+        <p> {{book}}</p>
+    </a>
+</div>
+
 <p>Appeared in : {{character.tvSeries}} TV Series</p>
 <p>Point-of-view in :{{character.povBooks}}</p>
 <p>Played by: {{character.playedBy}}</p>
