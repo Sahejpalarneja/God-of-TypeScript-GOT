@@ -42,7 +42,7 @@ export class DisplayCharacterComponent implements OnInit {
    this.getCharacter();
   }
   onHouseClick(url:string){
-    this.router.navigate(['/houseID'],{state:{data:url}})
+    this.router.navigate(['/houseId'],{state:{data:url}})
   }
   getfather(url:string):void{
     const id =  Number(url.split('/').pop() );
