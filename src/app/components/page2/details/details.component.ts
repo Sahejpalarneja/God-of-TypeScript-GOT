@@ -8,13 +8,13 @@ import { Book } from 'src/app/Templates/Book';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  currentBook :Book = history.state.data
+  url :string = history.state.data
   constructor() {
     
    }
 
   ngOnInit(): void {
-    alert(this.currentBook.name)
+   
   }
 
 }

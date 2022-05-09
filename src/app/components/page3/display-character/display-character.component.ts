@@ -2,6 +2,7 @@ import { Character } from 'src/app/Templates/Character';
 import { Component, OnInit, Input } from '@angular/core';
 import { CharacterService } from 'src/app/services/characters.service';
 import { Router } from '@angular/router';
+import { Book } from 'src/app/Templates/Book';
 
 @Component({
   selector: 'app-display-character',
@@ -12,7 +13,7 @@ export class DisplayCharacterComponent implements OnInit {
   @Input() character!:Character
   @Input() url =history.state.data;
   father! :Character;
-  characterObj! : Character ;
+ 
   constructor(
    
     private characterService: CharacterService,
@@ -33,6 +34,7 @@ export class DisplayCharacterComponent implements OnInit {
     this.characterService
       .getCharacter(id2)
       .subscribe((character) => (this.character = character));
+    this.getfather(this.character.father);
       
   }
   onCharacterClick(url:string){
@@ -40,7 +42,15 @@ export class DisplayCharacterComponent implements OnInit {
    this.getCharacter();
   }
   onHouseClick(url:string){
+    this.router.navigate(['/houseId'],{state:{data:url}})
+  }
+  getfather(url:string):void{
+    const id =  Number(url.split('/').pop() );
+    this.characterService.getCharacter(id).subscribe((data) => (this.father = data))
 
+  }
+  onBookClick(url:string){
+    this.router.navigate(['/details'],{state:{data:url}})
   }
   
 }

@@ -1,0 +1,29 @@
+<div class="data">
+<p>Name:{{house.name}}</p>
+<p>Region: {{house.region}}</p>
+<p>Coat of Arms: {{house.coatOfArms}}</p>
+<p>Word : {{house.word}} </p>
+<p>Titles: {{house.titles}}</p>
+<p>Seats : {{house.seats}}</p>
+<p>Founded : {{house.founded}}</p>
+<p>Died Out: {{house.diedOut}}</p>
+<p>Ancestral weopons: {{house.ancestralWeapons}}</p>
+</div>
+<div class="cliclable-data">
+    <div class="current-lord-value" *ngFor=" let lord of house.currentLord">
+        <a (click) = "onCharacterClick(lord)"><p>Current Lord: {{lord}}</p></a>
+    </div>
+    
+    <a (click)="onCharacterClick(house.heir)"><p>Heir : {{house.heir}}</p></a>
+    <a (click)="onHouseClick(house.overlord)"><p>Overlord: {{house.overlord}}</p></a>
+    <p>Cadet Branches: </p>
+    <div class="cadet-houses" *ngFor="let house of house.cadetBranches">
+        <a (click) = "onHouseClick(house)">{{house}}</a>
+    </div>
+    <p>Sworn Members: </p>
+        <div class="sworn-members" *ngFor="let character of house.swornMembers ">
+            <a (click)="onCharacterClick(character)">{{character}}</a>
+        </div>
+</div>
+
+

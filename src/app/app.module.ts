@@ -19,6 +19,7 @@ import { DisplayCharacterComponent } from './components/page3/display-character/
 import { DisplayAllCharactersComponent } from './components/characterPage/display-all-characters/display-all-characters.component';
 import { DisplayAllHousesComponent } from './components/characterPage/display-all-houses/display-all-houses.component';
 import { PaginatorModule } from 'primeng/paginator';
+import { HouseDetailsComponent } from './components/house-details/house-details.component';
 
 const appRoutes:Routes = [
   {path:'',component:BooksComponent},
@@ -26,7 +27,8 @@ const appRoutes:Routes = [
   {path:'character',component:DisplayAllCharactersComponent},
   {path:'books',component:BooksComponent},
   {path:'houses',component:DisplayAllHousesComponent},
-  {path:'id',component:CharacterDetailsComponent}
+  {path:'id',component:CharacterDetailsComponent},
+  {path:'houseId',component:HouseDetailsComponent}
 ]
   
 @NgModule({
@@ -45,7 +47,8 @@ const appRoutes:Routes = [
     CharacterDetailsComponent,
     DisplayCharacterComponent,
     DisplayAllCharactersComponent,
-    DisplayAllHousesComponent
+    DisplayAllHousesComponent,
+    HouseDetailsComponent
   ],
   imports: [
     BrowserModule,

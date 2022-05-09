@@ -17,8 +17,8 @@ export class BookItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClickDetails(currentBook:Book){
-    this.router.navigate(["/details"],{state:{data:currentBook}});
+  onClickDetails(url:string){
+    this.router.navigate(["/details"],{state:{data:url}});
   }
 
 }
