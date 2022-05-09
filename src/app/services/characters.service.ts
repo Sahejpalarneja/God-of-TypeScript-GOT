@@ -11,7 +11,7 @@ import {  map,  } from 'rxjs/operators';
 })
 export class CharacterService {
   private charactersUrl = 'https://www.anapioficeandfire.com/api/characters';
-  private pageSize = 50;
+  private pageSize = 20;
   
  
   constructor(
