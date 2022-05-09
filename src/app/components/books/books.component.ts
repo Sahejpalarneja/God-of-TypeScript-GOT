@@ -14,7 +14,7 @@ export class BooksComponent implements OnInit {
  
   
 
-  constructor(private BooksService :BooksService,private router:Router) {} 
+  constructor(private BooksService :BooksService) {} 
 
   ngOnInit(): void {
     this.BooksService.getBooks().subscribe((books) => (this.books = books))

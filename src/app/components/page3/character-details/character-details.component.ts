@@ -1,4 +1,6 @@
 import { Component, OnInit , Input} from '@angular/core';
+import { Character } from 'src/app/Character';
+
 
 @Component({
   selector: 'app-character-details',
@@ -6,7 +8,7 @@ import { Component, OnInit , Input} from '@angular/core';
   styleUrls: ['./character-details.component.css']
 })
 export class CharacterDetailsComponent implements OnInit {
-  character : string = history.state.data
+  character = history.state.data
   constructor() { }
 
   ngOnInit(): void {
