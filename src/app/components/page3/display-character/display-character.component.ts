@@ -1,7 +1,7 @@
 import { Character } from 'src/app/Character';
 import { Component, OnInit, Input } from '@angular/core';
-import { Location } from '@angular/common';
 import { CharacterService } from 'src/app/services/characters.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-display-character',
@@ -11,13 +11,15 @@ import { CharacterService } from 'src/app/services/characters.service';
 export class DisplayCharacterComponent implements OnInit {
   @Input() character!:Character
   @Input() url =history.state.data;
+  father! :Character;
   characterObj! : Character ;
   constructor(
    
     private characterService: CharacterService,
-    private location: Location
+    private router:Router,
+   
   ) {
-    this.getCharacter();
+  
   }
 
   ngOnInit(): void {
@@ -31,5 +33,11 @@ export class DisplayCharacterComponent implements OnInit {
     this.characterService
       .getCharacter(id2)
       .subscribe((character) => (this.character = character));
+      
   }
+  onCharacterClick(url:string){
+   this.url = url;
+   this.getCharacter();
+  }
+  
 }
