@@ -15,5 +15,12 @@
 <p>Founded : {{house.founded}}</p>
 <p>Died Out: {{house.diedOut}}</p>
 <p>Ancestral weopons: {{house.ancestralWeapons}}</p>
-<p>Cadet Branches: {{house.cadetBranches}}}</p>
-<p>Sworn Members: {{house.swornMembers}}</p>
+<p>Cadet Branches: </p>
+<div class="cadet-houses" *ngFor="let house of house.cadetBranches">
+    <a (click) = "onHouseClick(house)">{{house}}</a>
+</div>
+<p>Sworn Members: </p>
+<div class="sworn-members" *ngFor="let character of house.swornMembers ">
+    <a (click)="onCharacterClick(character)">{{character}}</a>
+</div>
+
