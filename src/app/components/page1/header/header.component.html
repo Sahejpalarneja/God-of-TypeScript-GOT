@@ -1,4 +1,17 @@
 <header>
     <h1>{{title}}</h1>
-    <img src="{{imageSrc}}"/>
+   
+    <div class="navigation">
+       <button (click) = "onBooksClicked()">
+            <a routerLink = "/books" >Books </a>
+       </button>
+       <button (click)="onCharacterClicked()">
+            <a routerLink= "/characters">Charaters</a>
+       </button> 
+       <button (click) = "onHousesClicked()">
+            <a routerLink="/houses">Houses</a>
+        </button>
+
+    </div>
+
 </header>

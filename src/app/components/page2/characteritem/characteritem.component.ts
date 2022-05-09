@@ -14,13 +14,13 @@ export class CharacteritemComponent implements OnInit {
   @Input() character! : string;
   characterObject! :Character;
   constructor(private characterService : CharactersService) { 
-    this.characterService.getCharacter(this.character).subscribe((character) => (this.characterObject))
+    //this.characterService.getCharacter(this.character).subscribe((character) => (this.characterObject))
     alert(this.characterObject.name)
   }
 
   ngOnInit(): void {
    
-    this.characterService.getCharacter(this.character).subscribe((character) => (this.characterObject))
+    //this.characterService.getCharacter(this.character).subscribe((character) => (this.characterObject))
     alert(this.characterObject.name)
   }
   

@@ -8,7 +8,7 @@ import { BookItemComponent } from '../../page1/book-item/book-item.component';
   styleUrls: ['./display-book.component.css']
 })
 export class DisplayBookComponent implements OnInit {
-  @Input() currentBook:Book;
+  @Input() currentBook!:Book;
   constructor() { }
 
   ngOnInit(): void {
