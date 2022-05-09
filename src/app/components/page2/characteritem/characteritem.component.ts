@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { CharactersService } from 'src/app/services/characters.service';
+import { CharacterService } from 'src/app/services/characters.service';
 import { Character } from 'src/app/Character';
 
 
@@ -13,7 +13,7 @@ import { map, Observable } from 'rxjs';
 export class CharacteritemComponent implements OnInit {
   @Input() character! : string;
   characterObject! :Character;
-  constructor(private characterService : CharactersService) { 
+  constructor() { 
     //this.characterService.getCharacter(this.character).subscribe((character) => (this.characterObject))
     alert(this.characterObject.name)
   }

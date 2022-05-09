@@ -1,40 +1,34 @@
-import { Component, OnInit ,Input} from '@angular/core';
-import { map, Observable, Subscriber, Subscription } from 'rxjs';
 import { Character } from 'src/app/Character';
-import { CharactersService } from 'src/app/services/characters.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { CharacterService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-display-character',
   templateUrl: './display-character.component.html',
-  styleUrls: ['./display-character.component.css']
+  styleUrls: ['./display-character.component.css'],
 })
-
 export class DisplayCharacterComponent implements OnInit {
-  @Input() character!:string;
-  private route!:ActivatedRoute;
-  characterObject!:Observable<Character>;
-   char! :Character;
-  
-  
-  id! :number;
-  name! :string ;
-  constructor(private characterService :CharactersService,) {
+  @Input() character!:Character;
+  characterObj! : Character ;
+  constructor(
+    private route: ActivatedRoute,
+    private characterService: CharacterService,
+    private location: Location
+  ) {
     this.getCharacter();
-    //this.characterService.getCharacter(this.character).subscribe((data) => (this.char))
-    
-    console.log(this.char)
   }
+
   ngOnInit(): void {
-    this.getCharacter()
-    //this.characterService.getCharacter(this.character).subscribe((data:Character) => (this.char))
-    console.log(this.char)
-    
-  }
-  getCharacter():void{
-   this.characterService.getCharacter(this.character).pipe(map((data) => data.name)).subscribe((data) =>(this.name))
-   console.log(this.name)
+    this.getCharacter();
+    console.log(this.character)
   }
 
-
+  getCharacter(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.characterService
+      .getCharacter(id)
+      .subscribe((character) => (this.character = character));
+  }
 }
