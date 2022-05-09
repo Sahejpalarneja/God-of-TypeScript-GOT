@@ -1,1 +1,13 @@
-<p *ngFor="let house of houses">{{house.name}}</p>
+<div class="charcter-item"*ngFor="let house of houses">
+    <a (click) = "onHouseClick(house)">
+        <span class="badge">{{ house.id }}</span
+        >{{ house.name }}
+      </a>
+      
+    
+</div>
+<p-paginator
+  [rows]="50"
+  [totalRecords]="444"
+  (onPageChange)="paginate($event)"
+></p-paginator>
