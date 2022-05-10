@@ -12,12 +12,12 @@ export class HouseDetailsComponent implements OnInit {
   @Input() url = history.state.data; 
   constructor(
     private houseService:HousesService,
-    private router:Router
+    private router:Router // this is used for navigation
 
   ) { }
 
   ngOnInit(): void {
-    this.getHouse()
+    this.getHouse()//sets all the houses
     
   }
   getHouse():void{
@@ -28,11 +28,13 @@ export class HouseDetailsComponent implements OnInit {
   }
   onHouseClick(url:string)
   {
+    //navigates to the new house details of the house cicked
     this.url = url;
     this.getHouse();
   }
   onCharacterClick(url:string)
   {
+    //navigates to the character details clicked
     this.router.navigate(['/id'],{state:{data:url}})
   }
 

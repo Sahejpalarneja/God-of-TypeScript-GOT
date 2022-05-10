@@ -13,7 +13,7 @@ import { Book } from 'src/app/Templates/Book';
 export class ScrollComponent implements OnInit {
   @Input() currentBook! : Book;
   characters :string[]= [];
- 
+ //sets up an infinite scroll for the charcaters present in a book
 
   constructor( private router:Router){ 
     
