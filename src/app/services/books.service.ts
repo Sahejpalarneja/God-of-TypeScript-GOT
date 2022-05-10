@@ -14,6 +14,7 @@ export class BooksService {
     return this.http.get<Book[]>(this.apiUrl)
 
   }
+  // we get the book based on the id  
   getBook(id: number): Observable<Book> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<Book>(url).pipe(
