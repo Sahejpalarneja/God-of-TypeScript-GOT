@@ -16,7 +16,7 @@ export class DisplayBookComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getBook()
+    this.getBook() // displays the book details
   }
   getBook(){
     const id = Number(this.url.split('/').pop());

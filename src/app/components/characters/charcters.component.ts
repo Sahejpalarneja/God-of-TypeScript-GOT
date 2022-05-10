@@ -3,7 +3,7 @@ import { Character } from 'src/app/Templates/Character';
 import { CharacterService } from 'src/app/services/characters.service';
 import { Router } from '@angular/router';
 
-
+//Raises an event every time a page is changed
 type PaginatorEvent = {
   page: number;
 };
@@ -20,6 +20,7 @@ export class CharctersComponent implements OnInit {
   constructor(private characterservice :CharacterService,private router :Router) { }
 
   ngOnInit(): void {
+    //Set the character
     this.getCharacters()
     
   }
@@ -29,10 +30,12 @@ export class CharctersComponent implements OnInit {
       .subscribe((characters) => (this.characters = characters));
   }
   paginate(event: PaginatorEvent): void {
+    //increases the page number
     this.currentPage = event.page + 1;
     this.getCharacters();
   }
   onCharacterclick(charcter:Character){
+    //navigates to the character details
     this.router.navigate(["/id"],{state:{data:charcter.url}})
   }
 

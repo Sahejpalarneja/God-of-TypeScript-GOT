@@ -11,7 +11,7 @@ import {  map,  } from 'rxjs/operators';
 })
 export class CharacterService {
   private charactersUrl = 'https://www.anapioficeandfire.com/api/characters';
-  private pageSize = 20;
+  private pageSize = 20;// sets 20 character per page 
   
  
   constructor(
@@ -19,6 +19,7 @@ export class CharacterService {
     
   ) {}
 
+  // this gets all the characters on a page
   getCharacters(pageNumber: number): Observable<Character[]> {
     const url = `${this.charactersUrl}?page=${pageNumber || 1}&pageSize=${
       this.pageSize
